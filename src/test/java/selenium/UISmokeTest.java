@@ -1,11 +1,10 @@
 package selenium;
 
+import java.io.File;
+
 import org.junit.Test;
-
 import org.openqa.selenium.By;
-
 import org.openqa.selenium.WebElement;
-
 import org.openqa.selenium.firefox.FirefoxDriver;
 
  
@@ -19,6 +18,10 @@ public class UISmokeTest {
    public void uiSmokeTest() {
 
 	   System.setProperty("webdriver.gecko.driver", "/home/manojkumar_ibt/geckodriver");
+	   
+	   File firefoxPathBinary = new File("/snap/firefox/280/firefox-bin");
+	   System.setProperty("webdriver.firefox.bin", firefoxPathBinary.getAbsolutePath());
+	   //driver = new FirefoxDriver();
 	   
        FirefoxDriver driver = new FirefoxDriver();
 
